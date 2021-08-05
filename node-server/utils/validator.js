@@ -1,6 +1,5 @@
 const payloadChecker = require('payload-validator');
 
-
 function isValid(payload, expectedPayload, requiredElements) {
     if(payload) {
         var result = payloadChecker.validator(payload,expectedPayload, requiredElements);
@@ -15,7 +14,7 @@ function isValid(payload, expectedPayload, requiredElements) {
 function validate(valObject, requiredElements) {
     return (req, res, next) => {
         try {
-            validator.isValid(req.body, valObject, requiredElements);
+            isValid(req.body, valObject, requiredElements);
             next();
         }
         catch (e) {

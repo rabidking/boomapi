@@ -73,6 +73,9 @@ function decryptUser(token) {
 function makeAdmin(username) {
   try {
   const user = findUserByName(username);
+  if(user == undefined) {
+    throw Error("user not found.")
+  }
   user.role = 'admin';
   return {success: true}
   }

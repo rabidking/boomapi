@@ -110,11 +110,6 @@ app.delete('/question', validator.validate(deleteQuesitonValidationObject, ['que
 
 // Custom error handling
 app.use(function (err, req, res, next) {
-  // Validation errors handled here
-  if (err instanceof ValidationError) {
-    return res.status(err.statusCode).json(err)
-  }
-
   console.error(err.stack);
   res.status(500).json({"message": "Server side error."})
 });

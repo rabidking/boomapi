@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1628106377003" clover="3.2.0">
-  <project timestamp="1628106377003" name="All files">
-    <metrics statements="58" coveredstatements="58" conditionals="12" coveredconditionals="12" methods="19" coveredmethods="19" elements="89" coveredelements="89" complexity="0" loc="58" ncloc="58" packages="2" files="2" classes="2"/>
+<coverage generated="1628172287569" clover="3.2.0">
+  <project timestamp="1628172287570" name="All files">
+    <metrics statements="67" coveredstatements="67" conditionals="16" coveredconditionals="16" methods="20" coveredmethods="20" elements="103" coveredelements="103" complexity="0" loc="67" ncloc="67" packages="2" files="2" classes="2"/>
     <package name="node-server">
-      <metrics statements="32" coveredstatements="32" conditionals="8" coveredconditionals="8" methods="7" coveredmethods="7"/>
+      <metrics statements="41" coveredstatements="41" conditionals="12" coveredconditionals="12" methods="8" coveredmethods="8"/>
       <file name="user.js" path="/home/cj.koral/Desktop/boom-api/node-server/user.js">
-        <metrics statements="32" coveredstatements="32" conditionals="8" coveredconditionals="8" methods="7" coveredmethods="7"/>
+        <metrics statements="41" coveredstatements="41" conditionals="12" coveredconditionals="12" methods="8" coveredmethods="8"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
@@ -17,27 +17,36 @@
         <line num="15" count="5007" type="cond" truecount="2" falsecount="0"/>
         <line num="16" count="1" type="stmt"/>
         <line num="19" count="5006" type="stmt"/>
-        <line num="25" count="5006" type="stmt"/>
-        <line num="26" count="5006" type="cond" truecount="2" falsecount="0"/>
-        <line num="28" count="6" type="stmt"/>
-        <line num="30" count="5006" type="stmt"/>
-        <line num="35" count="3" type="stmt"/>
-        <line num="36" count="3" type="cond" truecount="2" falsecount="0"/>
-        <line num="37" count="1" type="stmt"/>
-        <line num="38" count="2" type="cond" truecount="2" falsecount="0"/>
-        <line num="39" count="1" type="stmt"/>
-        <line num="41" count="1" type="stmt"/>
-        <line num="46" count="25035016" type="stmt"/>
-        <line num="50" count="2" type="stmt"/>
-        <line num="51" count="2" type="stmt"/>
-        <line num="52" count="2" type="stmt"/>
+        <line num="26" count="5006" type="stmt"/>
+        <line num="27" count="5006" type="cond" truecount="2" falsecount="0"/>
+        <line num="29" count="6" type="stmt"/>
+        <line num="31" count="5006" type="cond" truecount="2" falsecount="0"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="36" count="5006" type="stmt"/>
+        <line num="41" count="3" type="stmt"/>
+        <line num="42" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="43" count="1" type="stmt"/>
+        <line num="44" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="45" count="1" type="stmt"/>
+        <line num="47" count="1" type="stmt"/>
+        <line num="52" count="25040017" type="stmt"/>
         <line num="56" count="2" type="stmt"/>
         <line num="57" count="2" type="stmt"/>
-        <line num="58" count="1" type="stmt"/>
-        <line num="59" count="1" type="stmt"/>
-        <line num="62" count="1" type="stmt"/>
-        <line num="69" count="5009" type="stmt"/>
-        <line num="72" count="1" type="stmt"/>
+        <line num="58" count="2" type="stmt"/>
+        <line num="62" count="2" type="stmt"/>
+        <line num="63" count="2" type="stmt"/>
+        <line num="64" count="1" type="stmt"/>
+        <line num="65" count="1" type="stmt"/>
+        <line num="68" count="1" type="stmt"/>
+        <line num="74" count="2" type="stmt"/>
+        <line num="75" count="2" type="stmt"/>
+        <line num="76" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="77" count="1" type="stmt"/>
+        <line num="79" count="1" type="stmt"/>
+        <line num="80" count="1" type="stmt"/>
+        <line num="83" count="1" type="stmt"/>
+        <line num="90" count="5009" type="stmt"/>
+        <line num="93" count="1" type="stmt"/>
       </file>
     </package>
     <package name="node-server.api">

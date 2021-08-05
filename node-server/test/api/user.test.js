@@ -71,3 +71,7 @@ it('decrypts an invalid token', () => {
   expect(() => User.decryptUser('foo.bar')).toThrowError('invalid token');
 });
 
+it('fails to make an admin', () => {
+  const makeAdminResults = User.makeAdmin('missing user');
+  expect(makeAdminResults).toEqual({"message":"user not found."});
+})
