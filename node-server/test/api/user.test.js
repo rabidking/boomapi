@@ -7,7 +7,6 @@ it('creates a user happy path', () => {
   const password = 'password321';
   const user = User.createUser(username, password);
   expect(user.username).toEqual(username);
-  expect(user.password).toEqual(User.sha256hash(password));
   expect(user.score).toEqual(0);
 });
 

@@ -33,7 +33,11 @@ function createUser(username, password) {
     makeAdmin(user.username);
   }
   
-  return user;
+  return {
+    username: user.username,
+    score: user.score,
+    role: user.role
+  };
 }
 
 function createSession(username, password) {
@@ -53,7 +57,7 @@ function findUserByName(username) {
 }
 
 function encryptUser(user) {
-  const obj = JSON.stringify({ timestamp: Date.now(), ...user });
+  const obj = JSON.stringify({ timestamp: Date.now(), username: user.username, role: user.role, score: user.score });
   const signature = process.env.API_SECRET
   return jwt.sign(obj, signature)
 } 

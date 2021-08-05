@@ -68,7 +68,7 @@ app.get('/quiz', (req, res) => {
 
 app.post('/quiz', validator.validate(takeQuizValidationObject, ["choices"]), (req, res) => {
   try { 
-    // do nested validation here
+    // doing nested validation here
     req.body.choices.forEach((o) => {
       validator.isValid(o, choiceValidationObject, ["question", "answer"])
     })
@@ -77,7 +77,7 @@ app.post('/quiz', validator.validate(takeQuizValidationObject, ["choices"]), (re
     res.status(400).json({"message": e.message})
   }
   finally {
-    const user = req.user;
+    const user = User.findUserByName(req.user.username);
     const choices = req.body.choices;
     const scores = Trivia.scoreQuestions(choices);
     user.score += scores.filter(result => result.isCorrect).length;

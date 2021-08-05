@@ -15,7 +15,7 @@ const deleteQuesitonValidationObject = {
 }
 
 const takeQuizValidationObject = {
-  choices: []
+  choices: [{}]
 }
 
 const choiceValidationObject = {
