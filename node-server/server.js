@@ -43,7 +43,7 @@ app.post('/user', validator.validate(loginValidationObject, ["username", "passwo
 });
 
 // Any admin can make an admin
-app.post('/user/makeadmin', validator.validate(loginValidationObject, ["username"]), guards.roleGuard('admin'), (req, res) => {
+app.post('/user/makeadmin', guards.roleGuard('admin'), validator.validate(loginValidationObject, ["username"]), (req, res) => {
     res.status(200).json({ success: User.makeAdmin(req.body.username) });
 })
 
@@ -88,7 +88,7 @@ app.post('/quiz', validator.validate(takeQuizValidationObject, ["choices"]), (re
 /**
  * TODO: Implement me! Should add a new question to the quiz.
  */
-app.post('/question', validator.validate(questionValidationObject, ["answer", "prompt", "otherChoices"]), guards.roleGuard('admin'), (req, res) => {
+app.post('/question', guards.roleGuard('admin'), validator.validate(questionValidationObject, ["answer", "prompt", "otherChoices"]), (req, res) => {
     Trivia.addQuestion(req.body.prompt, req.body.answer, req.body.otherChoices)
     res.status(200).json({ success: true });
 });
@@ -96,7 +96,7 @@ app.post('/question', validator.validate(questionValidationObject, ["answer", "p
 /**
  * TODO: Implement me! Should remove a question from the quiz.
  */
-app.delete('/question', validator.validate(deleteQuesitonValidationObject, ['questionId']), guards.roleGuard('admin'), (req, res) => {
+app.delete('/question', guards.roleGuard('admin'), validator.validate(deleteQuesitonValidationObject, ['questionId']), (req, res) => {
   
     const isDeleted = Trivia.deleteQuestion(req.body.questionId)
     if (isDeleted) {
